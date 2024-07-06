@@ -112,7 +112,6 @@ const getAll = async(req,res) => {
 
 const getCityByName = async(req,res) => {
     try {
-        console.log('query',req.query.name);
         const response = await cityService.getCityByName(req.query);
         return res.status(200).json({
             data: response,
